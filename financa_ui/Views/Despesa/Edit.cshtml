@@ -1,0 +1,59 @@
+@model financa_domain.Despesa
+
+
+<div class="form-horizontal">
+    <form action="Edit" method="Post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="id"
+                    value="@Model.id" />
+        </div>
+
+        <div class="form-group">
+            <label>Data</label>
+            <input  class="form-control"
+                    type="text"
+                    name="dataDespesa"
+                    value="@Model.dataDespesa" />
+        </div>
+
+        <div class="form-group">
+            <label>Número do documento</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="numDoc"
+                    value="@Model.numDoc"/>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo da Despesa</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="grupoDespesa"
+                    value="@Model.grupoDespesa"/>
+        </div>
+
+        <div class="form-group">
+            <label>Estabelecimento</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="estabelecimento"
+                    value="@Model.estabelecimento"/>
+        </div>
+
+        <div class="form-group">
+            <label>Valor</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="valor"
+                    value="@Model.valor"/>
+        </div>
+
+        <input  class="btn btn-primary" 
+                type="submit" value="Salvar"/>
+
+    </form>
+</div>

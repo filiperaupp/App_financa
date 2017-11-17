@@ -1,0 +1,36 @@
+@model IEnumerable<financa_domain.Despesa>
+<br>
+<a class="btn btn-success" href="Despesa/Create">Adicionar Nova Despesa</a>
+<br>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Data</th>
+                <th>Número do documento</th>
+                <th>Tipo da despesa</th>
+                <th>Estabelecimento</th>
+                <th>Valor</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </tr>
+        </thead>
+
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.dataDespesa</td>
+                <td>@item.numDoc</td>
+                <td>@item.grupoDespesa</td>
+                <td>@item.estabelecimento</td>
+                <td>@item.valor</td>
+                <td><a class="btn btn-danger" href="Despesa/Delete/@item.id">Deletar</a> </td>
+                <td><a class="btn btn-primary" href="Despesa/Edit/@item.id">Editar</a> </td>
+
+            </tr>
+        }
+    </table>
+</div>

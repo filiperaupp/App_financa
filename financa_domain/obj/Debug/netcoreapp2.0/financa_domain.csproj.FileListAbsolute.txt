@@ -1,0 +1,8 @@
+C:\Users\filip\Desktop\app_financa\financa_domain\bin\Debug\netcoreapp2.0\financa_domain.deps.json
+C:\Users\filip\Desktop\app_financa\financa_domain\bin\Debug\netcoreapp2.0\financa_domain.dll
+C:\Users\filip\Desktop\app_financa\financa_domain\bin\Debug\netcoreapp2.0\financa_domain.pdb
+C:\Users\filip\Desktop\app_financa\financa_domain\obj\Debug\netcoreapp2.0\financa_domain.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\app_financa\financa_domain\obj\Debug\netcoreapp2.0\financa_domain.AssemblyInfoInputs.cache
+C:\Users\filip\Desktop\app_financa\financa_domain\obj\Debug\netcoreapp2.0\financa_domain.AssemblyInfo.cs
+C:\Users\filip\Desktop\app_financa\financa_domain\obj\Debug\netcoreapp2.0\financa_domain.dll
+C:\Users\filip\Desktop\app_financa\financa_domain\obj\Debug\netcoreapp2.0\financa_domain.pdb
