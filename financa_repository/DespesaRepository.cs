@@ -13,14 +13,15 @@ namespace financa_repository
         }
 
         public Despesa GetById(int id) {
-            return context.Despesas.SingleOrDefault(x=> x.id == id);
+            return context.Despesas.Include(x=> x.grupoDespesa).SingleOrDefault(x=> x.id == id);
         }
 
         public List<Despesa> GetAll(){
-            return context.Despesas.ToList();
+            return context.Despesas.Include(x=> x.grupoDespesa ).ToList();
         }
 
         public void Create(Despesa despesa){
+            despesa.grupoDespesa = context.TiposDespesas.Find(despesa.grupoDespesa.id);
             context.Despesas.Add(despesa);
             context.SaveChanges();
         }
@@ -31,6 +32,7 @@ namespace financa_repository
         }
 
         public void Update (Despesa despesa){
+            despesa.grupoDespesa = context.TiposDespesas.Find(despesa.grupoDespesa.id);
             context.Entry(despesa).State = EntityState.Modified;
             context.SaveChanges();
         }

@@ -7,9 +7,11 @@ namespace financa_repository
     {
         
         private IDespesaRepository _repository;
+        private ITipoDespesaRepository _repositoryTipoDesp;
 
-        public DespesaController(IDespesaRepository repository){
+        public DespesaController(IDespesaRepository repository, ITipoDespesaRepository repositoryTipoDesp){
             _repository = repository;
+            _repositoryTipoDesp = repositoryTipoDesp;
         }
 
         public IActionResult Index()
@@ -21,6 +23,7 @@ namespace financa_repository
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Categoria = _repositoryTipoDesp.GetAll();
             return View();
         }
 
@@ -39,6 +42,7 @@ namespace financa_repository
 
         public IActionResult Edit (int id)
         {
+            ViewBag.Categoria = _repositoryTipoDesp.GetAll();
             return View (_repository.GetById(id));
         }
 

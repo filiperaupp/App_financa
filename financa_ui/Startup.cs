@@ -28,7 +28,8 @@ namespace financa_ui
             services.AddDbContext<DataContext>(x =>
                                                 x.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped<IDespesaRepository,DespesaRepository>();                                    
+            services.AddScoped<IDespesaRepository,DespesaRepository>();
+            services.AddScoped<ITipoDespesaRepository,TipoDespesaRepository>();                                    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
